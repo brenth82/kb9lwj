@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# bin/release <build-dir>
+
+# I didn't really feel the need to add anything here. 
+
+# This script can be used to start services but in our 
+# case electrum is just an application that gets called 
+# later by our worker.
+

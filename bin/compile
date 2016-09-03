@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=$1  
+export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
+
+# Without this, pip will not be found
+ln -s $BUILD_DIR/.heroku /app/  
+ls -al /app/.heroku
+
+echo "-----> Installing electrum"  
+$BUILD_DIR/.heroku/python/bin/pip install https://download.electrum.org/Electrum-1.9.7.tar.gz#md5=5764f38d6e4bc287a577c8d16e797882
+
+echo "-----> Electrum has been installed!"  
+touch $1/.heroku/electrumed
+
+
+echo "-----> Wallet Not Configured..."  

@@ -1,0 +1,7 @@
+#!/bin/sh
+# bin/detect <build-dir>
+
+# Similarly, not much to detect here prior to the buildpacks install
+# Without the following line, the buildpack deployment will fail
+exit 0
+
